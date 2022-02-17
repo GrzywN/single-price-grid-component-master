@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+// Font weights: 400 and 700 //
+
+$font-family-karla: "Karla", sans-serif;
+
+@mixin font-grid-primary-header {
+  font-family: $font-family-karla;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+@mixin font-grid-header {
+  font-family: $font-family-karla;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.22px;
+}
+
+@mixin font-grid-paragraph {
+  font-family: $font-family-karla;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+@mixin font-grid-price-primary {
+  font-family: $font-family-karla;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+@mixin font-grid-price-secondary {
+  font-family: $font-family-karla;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+@mixin font-grid-button {
+  font-family: $font-family-karla;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+@mixin font-grid-list-item {
+  font-family: $font-family-karla;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.17px;
+}

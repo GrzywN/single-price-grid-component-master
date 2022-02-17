@@ -1,0 +1,114 @@
+.grid {
+  width: 635px;
+  max-height: 60vh;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &__container {
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-height: 259px;
+    &--1 {
+      background-color: #fff;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      grid-column: 1/3;
+      gap: 1em;
+      > .grid__primary-header {
+        color: $darker-cyan;
+        margin-bottom: 0.75em;
+      }
+      > .grid__header {
+        color: $bright-yellow;
+      }
+      > .grid__paragraph {
+        color: $grayish-blue;
+      }
+    }
+    &--2 {
+      background-color: $darker-cyan;
+      color: #fff;
+      justify-content: center;
+      > .grid__header {
+        margin-bottom: 1em;
+      }
+      > .grid__button {
+        margin-top: 1em;
+      }
+    }
+    &--3 {
+      padding-block: 1em;
+      background-color: $cyan;
+      color: #fff;
+      > .grid__header {
+        color: #fff;
+      }
+    }
+  }
+  &__primary-header {
+    @include font-grid-primary-header;
+  }
+  &__header {
+    @include font-grid-header;
+  }
+  &__paragraph {
+    @include font-grid-paragraph;
+  }
+  &__price {
+    display: flex;
+    place-items: center;
+    gap: 1em;
+    &-primary {
+      @include font-grid-price-primary;
+    }
+    &-secondary {
+      @include font-grid-price-secondary;
+      opacity: 50%;
+    }
+  }
+  &__button {
+    @include font-grid-button;
+    background-color: $bright-yellow;
+    border: 0;
+    color: #fff;
+    padding-block: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &:hover {
+      cursor: pointer;
+      transition: transform 150ms ease;
+      transform: scale(1.1);
+    }
+  }
+  &__list {
+    margin-top: 1em;
+    list-style-type: none;
+    opacity: 75%;
+    display: grid;
+    &-item {
+      @include font-grid-list-item;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  html {
+    font-size: 0.9rem;
+  }
+  body {
+    padding: 1.5em;
+  }
+  .grid {
+    max-height: none;
+    min-height: 259px;
+    display: flex;
+    flex-direction: column;
+    &__container {
+      max-height: none;
+    }
+  }
+}
