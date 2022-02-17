@@ -33,6 +33,7 @@
       background-color: $darker-cyan;
       color: #fff;
       justify-content: center;
+      border-bottom-left-radius: 8px;
       > .grid__header {
         margin-bottom: 1em;
       }
@@ -44,6 +45,7 @@
       padding-block: 1em;
       background-color: $cyan;
       color: #fff;
+      border-bottom-right-radius: 8px;
       > .grid__header {
         color: #fff;
       }
@@ -109,6 +111,12 @@
     flex-direction: column;
     &__container {
       max-height: none;
+      &--2 {
+        border-radius: 0;
+      }
+      &--3 {
+        border-bottom-left-radius: 8px;
+      }
     }
   }
 }

@@ -84,6 +84,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom-left-radius: 8px;
 }
 
 .grid__container--2 > .grid__header {
@@ -98,6 +99,7 @@ main {
   padding-block: 1em;
   background-color: #4bbfbc;
   color: #fff;
+  border-bottom-right-radius: 8px;
 }
 
 .grid__container--3 > .grid__header {
@@ -209,6 +211,12 @@ main {
   }
   .grid__container {
     max-height: none;
+  }
+  .grid__container--2 {
+    border-radius: 0;
+  }
+  .grid__container--3 {
+    border-bottom-left-radius: 8px;
   }
 }
 /*# sourceMappingURL=style.css.map */
